@@ -1,0 +1,110 @@
+/* overall layout */
+body {
+    background-color: #FFC233;
+    width: 80%;
+    position: relative;
+    left: 8%;
+    margin: 1%;
+    font-family: sans-serif;
+
+    line-height: 115%;
+    font-size: 95%;
+}
+
+div.content {
+    background-color: #FFE8B3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family:sans-serif;
+    margin-top: 2em;
+    color: #874;
+}
+
+h1, h2, h3, h4 {
+    border-bottom: 3px solid #FFC233;
+}
+
+h4 {
+    border-width: 1px;
+}
+
+
+div.content > ul, div.content > p, div.content > ol, div.content > pre, div.content > dl,
+.changed {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+
+a {
+    color:#444400;
+}
+
+a.emph {
+    color:#666600;
+}
+
+a.emph:visited {
+    text-decoration:underline;
+    color:#666600;
+}
+
+a:hover {
+    color:#666644;
+}
+
+a:visited {
+    color:#555500;
+    text-decoration:none;
+}
+
+a:visited:hover {
+    text-decoration:underline;
+}
+
+.changed {
+    border:1px solid #FFC233 !important;
+    background-color:#E6D6B3 !important;
+}
+
+dt {
+    font-weight:bold;
+}
+
+.filename {
+    font-weight:bold;
+}
+
+pre {
+    background-color:#C4BCA9;
+}
+
+ul.p-style {
+    list-style-type:none;
+    padding-left: 0px;
+}
+
+ul.p-style li {
+    padding-left:0px;
+
+}
+
+dl.attributes dt {
+    font-family:monospace;
+
+}
+
+.attribute {
+    font-family:monospace;
+}
+
+.element {
+    font-family:monospace;
+    color:#444;
+    font-weight:bold;
+}
+
+.value {
+    font-family: monospace;
+}

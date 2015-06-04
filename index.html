@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd" > 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" >
+    <head>
+        <meta http-equiv="Content-type" content="text/xml+html; charset=utf-8" />
+        <meta name="Description" content="foo_title homepage" />
+        <meta name="robots" content="all, follow"/>
+        <meta name="author" content="Roman Plasil quiark@centrum.cz" />
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+
+        <title>foo_title component</title>
+    </head>
+
+    <body>
+        <div class="content">
+        <h1>foo_title component</h1>
+        <p>
+            foo_title is my component for <a
+            href="http://www.foobar2000.org">foobar2000</a>. 
+            Foobar2000 is a music player suitable for advanced users. foo_title's purpose
+            is to show the currently playing song on the top of the screen all the time
+            (something like winamp's windowshade mode). It supports custom-made skins and it's written in C# (with some
+            C++/CLI for binding to foobar, of course). Therefore, you need the .NET
+            Framework 2.0. 
+        </p>
+
+        <h2>Download</h2>
+        <p>
+            <a class="emph" href="https://sourceforge.net/project/showfiles.php?group_id=178279">You can get the component here</a>. 
+            The package includes some skins.
+            Current version is 0.8 as of July 25<sup>th</sup> 2009.
+        </p>
+        <p>
+            Hosted at 
+            <a href="http://sourceforge.net/projects/foo-title"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=178279&type=11" width="120" height="30" border="0" alt="Get foo_title at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>
+        </p>
+
+        <h2>Screenshots</h2>
+        <p>
+            <img src="images/screen1.png" alt="An image of foo_title" />
+        </p>
+
+        <h2>Features</h2>
+        <p>
+            First of all, this component is ported to foobar2000 v. 0.9.5 and it won't work with older releases. 
+        </p>
+        <ul>
+            <li>
+                <ul class="p-style">
+                    <li>Transparent skins</li>
+                    <li>Thanks to Rui Godinho Lopes's PerPixelAlphaForm class, foo_title supports layered transparent skins.</li>
+                </ul>
+            </li>
+            <li>
+                <ul class="p-style">
+                    <li>Property sheet support</li>
+                    <li>You can adjust all properties in the property sheet (Display / foo_title)</li>
+                </ul>
+            </li>
+            <li>
+                    Fading in and out on mousehover
+            </li>
+            <li>
+                    Album art support
+            </li>
+            <li>
+                    Clickable buttons with any menu item as the action
+            </li>
+            <li>
+                    Flexible show/hide timing
+            </li>
+        </ul>
+
+        <h3>0.8 Changelog</h3>
+        <ul>
+            <li>two new skins ;)</li>
+            <li>buttons can enable/disable parts of the skin</li>
+            <li>buttons can use context menu commands</li>
+            <li>images are no longer locked - simplifies skin development</li>
+            <li>option to show foo_title when playback is stopped/paused (when not set to show always)</li>
+            <li>fixed show n seconds after song start when changing song</li>
+            <li>re-loading skin just by clicking Apply skin</li>
+            <li>rotated text</li>
+            <li>foo_managedWrapper supports creating mainmenu popups</li>
+            <li>foo_managedWrapper supports enumerating mainmenu commands, mainmenu groups and popups</li>
+            <li>fixed a problem that foo_title would not show when it is set to only show when foobar is minimized</li>
+            <li>on song start showing now takes stream title change into account</li>
+            <li>metadb_handle handling is probably done better this time</li>
+            <li>album art image is resized once and cached, this avoids high CPU usage with large album arts</li>
+        </ul>
+
+        <h3>0.7.2 Changelog</h3>
+        <ul>
+            <li>fixed a problem that foo_title would not show when it is set to only show when foobar is minimized</li>
+            <li>on song start showing now takes stream title change into account</li>
+            <li>metadb_handle handling is probably done better this time</li>
+            <li>album art image is resized once and cached, this avoids high CPU usage with large album arts</li>
+        </ul>
+
+        <h3>0.7.1 Changelog</h3>
+        <ul>
+            <li>auto restoring on top position every now and then ;)</li>
+            <li>foo_managedWrapper works on Vista again</li>
+            <li>foo_title no longer prevents Windows from shutting down</li>
+            <li>skins are now also loaded from the user profile directory (if enabled in foobar)</li>
+        </ul>
+
+        <h3>0.7 Changelog</h3>
+        <ul>
+             <li> fixed disappearing fades</li>
+             <li> added support for choosing always on top/normal/on desktop z-order</li>
+             <li> added support for creating menu commands from .NET code</li>
+             <li> album art image file is no longer locked, it is loaded into memory</li>
+             <li> created a custom configuration system</li>
+             <li> foo_title can now pop up at the beginning and/or the end of a song</li>
+             <li> pressing Alt-F4 on foo_title will disable it instead of crashing</li>
+             <li> sticking to screen borders now permits pushing it behind the edge (this should make it possible to put foo_title on a different monitor)</li>
+             <li> reset button in the pref page - resets everything, including window position</li>
+        </ul>
+        <h3>0.6 Changelog</h3>
+        <ul>
+            <li>support for bold/italic text, textlayer rewritten </li>
+            <li>fixed a bug that prevented foo_title from loading when foobar wasn't started from it's directory
+            (fooManagedWrapper)</li>
+            <li>added window position storing</li>
+            <li>fixed album art not showing when stored in a directory with unicode characters</li>
+            <li>skins list refreshes when property page is displayed</li>
+            <li>fixed fill-images overlapping it's client rect</li>
+            <li>removed icon from alt-tab</li>
+            <li>option to show/hide/only when foobar is minimized</li>
+            <li>using pure WinAPI to make it stay on top (not sure if it hels though)</li>
+            <li>the text is now updating also on stop and pause</li>
+            <li>support for defaultText - shown when nothing is playing at the moment</li>
+            <li>now it's possible to set the align of scrolling-text when the text is shorter than layer's size</li>
+            <li>support for changing opacity - in normal and mouseover state</li>
+            <li>other bugfixes</li>
+        </ul>
+
+        <p>These changes are backward compatible, so all your current skins will work in 0.8 as well.</p>
+        <p class="changed">All changes in skins from previous version is marked like this paragraph.</p>
+
+
+        <h2>Installation</h2>
+        <p>
+            Installation is quite easy now. You just need to put the files from the archive to foobar's directory,
+            so that the dlls go to the components directory and there is a new directory called foo_title. This
+            directory contains the skins.
+        </p>
+
+        <h2>Creating skins</h2>
+        <p>
+            foo_title skins consist of one XML and some image files. The XML file describes where and which images to draw.
+            Supported image formats are those supported by the .NET framework - that is bmp, jpg, .png (for transparent images) and
+            perhaps more.
+        </p>
+        <p>
+            Each skin has it's own directory under foo_title. The skin.xml must exist in that directory too.
+        </p>
+
+        <h3>Introduction to creating skins</h3>
+        <div class="changed">
+        <p>
+            Skins are composed of multiple images, each of the images is saved as a separate file. Usually there is the main
+            background image and some button images. It is nice when users get visual response to hovering over or clicking
+            a button. This can be accomplished by drawing three variants of each button, one for each state - normal, hover
+            and clicked.
+
+            All images must be cropped to minimal size - there should be no useless empty (transparent) areas. All three button
+            state images must have the same size and the button features should be located at the same place within the image,
+            otherwise you may end up with buttons that "jump around" when pressed. Look at existing skins for examples. 
+            It is recommended to use the PNG format, because it supports the alpha channel, which makes it possible to have 
+            nice and round and even semitransparent skins. 
+        </p>
+
+        <p>
+            Before writing the XML file, we need to know where the buttons and the song information should be located. Use
+            your image editing program to measure the <em>x</em> (how many pixels are there from the skin background's
+            left border to the left border of the button/text) and <em>y</em> (how many pixels are there from the skin's background
+            top border to the top border of the button/text). Write the values down for every button and every piece of separate
+            text.
+        </p>
+
+        <p>
+            Now open up Notepad or your favourite XML editor and create a new file called <code>skin.xml</code> in the same folder as
+            the images. If you are completely new to XML, you may
+            like to read some introduction to XML on the internet first. Copy and paste the following template:
+        </p>
+<pre>
+<?xml version="1.0" encoding="utf-8"?>
+
+&lt;skin
+    author="[your name here]"
+    name="[skin name here]"
+    width="[Width of the skin in pixels]"
+    height="[Height of the skin in pixels]"&gt;
+
+    &lt;layer name="background" type="absolute-images"&gt;
+        &lt;geometry type="full"&gt;
+            &lt;padding left="0" top="0" right="0" bottom="0"/&gt;
+        &lt;/geometry&gt;
+        &lt;contents&gt;
+            &lt;image src="[background.png]" /&gt;
+        &lt;/contents&gt;
+    &lt;/layer&gt;
+
+	&lt;layer name="[button name]" type="button"&gt;
+		&lt;geometry type="absolute"&gt;
+			&lt;size x="[width of the button image]" y="[height of the button image]" /&gt;
+			&lt;position x="[x as you wrote it down]" y="[y as you wrote it down]" align="left" /&gt;
+		&lt;/geometry&gt;
+		&lt;contents&gt;
+    			&lt;action&gt;
+                [name of menu item the button should trigger]
+    			&lt;/action&gt;
+    			&lt;normalImg src="[name of the image of the button in normal state]" /&gt;
+    			&lt;overImg src="[name of the image of the button in hover state]" /&gt;
+    			&lt;downImg src="[name of the image of the button in pressed state]" /&gt;
+		&lt;/contents&gt;
+	&lt;/layer&gt;
+
+	&lt;layer name="trackinfo" type="scrolling-text"&gt;
+		&lt;geometry type="absolute"&gt;
+			&lt;size x="[width of the button image]" y="[height of the button image]" /&gt;
+			&lt;position x="[x as you wrote it down]" y="[y as you wrote it down]" align="left" /&gt;
+		&lt;/geometry&gt;
+		&lt;contents spacing="0" font="Microsoft Sans Serif" size="7"&gt;
+			&lt;label position="left" color="ffebebe6"&gt;[%artist%  |  ][%tracknumber%  |   ]%title%&lt;/label&gt;
+		&lt;/contents&gt;
+	&lt;/layer&gt;
+
+    &lt;/skin&gt;
+</pre>
+
+        <p>
+            Copy each <em>layer</em> block as many times as you have buttons. Replace the values in brackets with actual values.
+            You can also change other attributes if you know what they mean (see elements reference below).
+        </p>
+        <p>
+            Now it's time to test your skin. Install it like the other skins, open foo_title's preferences page and load it.
+            If something is unclear, you can look at other skins for inspiration, read this documentation more carefully
+            or ask in the Creating skins thread at <a href="http://www.hydrogenaudio.org/forums/index.php?showtopic=86282">http://www.hydrogenaudio.org/forums/index.php?showtopic=86282</a>
+        </p></div>
+
+        <h3>Elements reference</h3>
+
+        <p>
+            The main element is <span class="element">skin</span>. It has the following attributes:
+        </p>
+        <dl>
+            <dt>author</dt><dd>Who's the author of this skin. This information is not shown anywhere yet, but it's nice to know</dd>
+            <dt>name</dt><dd>The name of this skin. This is quite useless :)</dd>
+            <dt>width</dt><dd>This is the initial width of the window. However the width is adjusted automatically.</dd>
+            <dt>height</dt><dd>This is the initiali height of the window, but it is also automatically adjusted.</dd>
+        </dl>
+        <p>
+            So the beginning of the xml file should be something like
+        </p>
+<pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+
+&lt;skin
+    author=&quot;Roman Plasil&quot;
+    name=&quot;White skin&quot;
+    width=&quot;400&quot;
+    height=&quot;22&quot;&gt;
+
+</pre>
+        <p>
+            The main element contains one or more <span class="element">layer</span>
+            elements. Each <span class="element">layer</span> can contain more <span
+            class="element">layer</span>s, so it's not a layer in the original sense,
+            because they can be nested. 
+        </p>
+        <p>
+            Each layer has a <span class="element">geometry</span> element which defines the layer's position, size and its behaviour
+            when it's resized.
+        </p>
+        <p>
+            The <span class="element">layer</span> element looks like this :
+        </p>
+<pre>
+    &lt;layer name=&quot;main&quot; type=&quot;absolute-images&quot; enabled=&quot;true&quot;&gt;
+        &lt;geometry type=&quot;absolute&quot;&gt;
+            &lt;size x=&quot;370&quot; y=&quot;58&quot; /&gt;
+            &lt;position x=&quot;0&quot; y=&quot;0&quot; align=&quot;left&quot; /&gt;
+        &lt;/geometry&gt;
+
+        &lt;contents&gt;
+            &lt;image src=&quot;main.png&quot; /&gt;
+        &lt;/contents&gt;
+        &lt;!-- optionally, another &lt;layer&gt; element (or more) go here --&gt;
+   &lt;/layer&gt;
+
+ </pre>
+        <p>
+            The <span class="attribute">name</span> attribute is just informative, but
+            <span class="attribute">type</span> is more important. It chooses the way the
+            content is displayed. More on this later.
+        </p>
+        <p class="changed">
+            There's a new optional attribute, <span class="attribute">enabled</span> ::= [<span class="value">true</span>] | <span class="value">false</span> <br />
+            which specifies if the layer is initially enabled. It can be turned off or on using a button.
+        </p>
+        <h3>Layer's geometry</h3>
+        <p>
+            Each layer has got it's geometry, which defines it's position and size within
+            the parent layer. There are two types of geometries:
+        </p>
+        <p>
+            Almost all the entries in the layer's geometry (size, position, padding) can now contain foobar2000 formatting strings. 
+            Everything that works in foobar2000 will work here as well, see titleformat_help.html in your foobar directory for
+            further reference. Please note that this feature when used is slightly more resource demanding (one needs to recalculate
+            the sizes and positions each update, that is usually every 100 ms). Also, unless the string contains a $ or %, it
+            is not evaluated as a formatting string (for performance reasons). But that shouldn't cause any problems, because
+            as far as I know, all formatting strings contain these characters.
+        </p>
+        <p>
+            A trackbar can be created using an absolute geometry with position similar to the following:
+        </p>
+        <pre>
+&lt;position x="$add(41, $mul(4, $div($mul(%playback_time_seconds%, 94), %length_seconds%)))" y="19" align="left" /&gt;
+        </pre>
+        <dl>
+            <dt class="value">full</dt><dd>
+                The layer occupies as much space as possible - the whole client area
+                of the parent layer. <span class="value">full</span> type requires
+                a <span class="element">padding</span> element with the following
+                attributes: <span class="attribute">left</span>, <span
+                class="attribute">top</span>, <span class="attribute">right</span>, 
+                <span class="attribute">bottom</span>. These attributes adjust the
+                position of the client area of the layer within the parent layer. For
+                example:
+<pre>
+&lt;geometry type=&quot;full&quot;&gt;
+    &lt;padding left=&quot;66&quot; top=&quot;4&quot; right=&quot;55&quot; bottom=&quot;0&quot; /&gt;
+&lt;/geometry&gt;
+</pre>
+            </dd>
+            <dt class="value">absolute</dt><dd>
+                The layer has fixed absolute size. It has a 
+                <span class="element">position</span> subelement with the <span
+                class="attribute">x</span>, <span class="attribute">y</span> and <span
+                class="attribute">align</span> attributes. Align can be either <span
+                class="value">left</span> or <span class="value">right</span>. The
+                <span class="attribute">x</span> and <span class="attribute">y</span>
+                attributes adjust the position of the layer relative to it's
+                alignment. For example:
+<pre>
+&lt;geometry type=&quot;absolute&quot;&gt;
+    &lt;size x=&quot;200&quot; y=&quot;22&quot; /&gt;
+    &lt;position x=&quot;0&quot; y=&quot;0&quot; align=&quot;left&quot; /&gt;
+&lt;/geometry&gt;
+</pre>
+            </dd>
+        </dl>
+        <p>
+            <img src="images/layers1.png" alt="Example of layers 1" />
+            <img src="images/layers2.png" alt="Example of layers 2 - enlarged" />
+            For example, the red layer has a <span class="value">full</span>-type geometry
+            with <span class="attribute">padding</span> set to all 0's, except for <span
+            class="attribute">right</span> which is set to something about 60. It contains
+            another layer with a <span class="value">full</span>-geometry (the green one) and you
+            can see that it has large top and right <span class="attribute">padding</span>
+            and a small left and bottom <span class="attribute">padding</span>. When the
+            containing (white) layer is resized, the <span
+            class="value">full</span>-geometry layers automatically adjust their sizes.
+            The blue layer has an <span class="value">absolute</span>-geometry and it is not
+            resized. It's <span class="attribute">align</span> is set to <span
+            class="value">right</span> and you can see that it moves when the red layer is
+            resized.
+        </p>
+        <h3>Layer types</h3>
+        <p>
+            Now that you (hopefully) understand how the layers are placed and sized, let's
+            have a look at what can they contain.
+        </p>
+        <p>
+            There are the following types of layers:
+        </p>
+        <h4>fill-images</h4>
+        <p>
+            Contains 3 images which are drawn besides to allow nice resizing. One image
+            for the left side, one center image and one image for the right side:
+        </p>
+<pre>
+&lt;contents&gt;
+    &lt;image position=&quot;left&quot; src=&quot;white\left_back.png&quot; /&gt;
+    &lt;image position=&quot;center&quot; repeat=&quot;true&quot; src=&quot;white\repeat_back.png&quot; /&gt;
+    &lt;image position=&quot;right&quot; src=&quot;white\right_back.png&quot; /&gt;
+&lt;/contents&gt;
+</pre>
+        <p>
+            The center image has the <span class="attribute">repeat</span>
+            attribute, which can be either <span class="value">true</span> or
+            <span class="value">false</span> depending whether you want the center
+            image to repeat or be stretched.
+        </p>
+
+        <h4>text</h4>
+        <p>
+            This layer just displays some text and it looks like this:
+        </p>
+<pre >
+        &lt;contents spacing=&quot;20&quot; font=&quot;Verdana&quot; size=&quot;8&quot; bold=&quot;true&quot; italic=&quot;true&quot;&gt;
+            &lt;defaultText&gt;foobar2000&lt;/defaultText&gt;
+            &lt;label position=&quot;left&quot; color=&quot;ff1234f6&quot; bold=&quot;false&quot; font=&quot;tahoma&quot; &gt;%artist% '('%album%')' - %title%&lt;/label&gt;
+            &lt;label position=&quot;right&quot; color=&quot;ff000000&quot;&gt;%_time_elapsed%/%_length%&lt;/label&gt;
+        &lt;/contents&gt;
+</pre>
+        <p>
+            <span class="attribute">spacing</span> is the space between the left
+            and right labels. The <span class="attribute">color</span> defines the color
+            in a similar way to HTML colors. The first 2 numbers is alpha.
+            As you can see, the text layer uses foobar's title formatting.
+            This is the only layer which can resize the skin. It does so
+            according to text width. Layer's geometry must be <span class="attribute">full</span> 
+            for resizing to work.
+        </p>
+        <p>
+            Now you can specify 
+                <span class="attribute">font</span>,
+                <span class="attribute">size</span>,
+                <span class="attribute">color</span>, 
+                <span class="attribute">italic</span> and
+                <span class="attribute">bold</span> attributes in both labels and in the contents node. The values written
+                in the contents node are taken as default and can be overriden in the labels. So in the example above,
+                the left label would be italic, Tahoma of size 8.
+            </p>
+        <p >
+            The contents layer can also have a <span class="element">defaultText</span> element, which is shown
+            when nothing is playing and on startup.
+        </p>
+        <div class="changed">
+            <p>
+                There is now the <span class="attributes">angle</span> attribute on the <span class="element">contents</span> element.
+                It can have an arbitrary value, but sizing works properly only for multiples of 90.
+            </p>
+        </div>
+
+
+        <h4>scrolling-text</h4>
+        <p>
+            Scrolling text is almost the same as normal text, except the following:
+        </p>
+        <ul>
+            <li>It can only have one label.</li>
+            <li>
+                You can now specify text align when it's shorter than
+                layer size. Just write <span class="value">left</span>,
+                <span class="value">center</span> or <span
+                    class="value">right</span> to the <span
+                    class="attribute">position</span> attribute of the
+                    <span class="element">label</span> element: 
+                <pre>&lt;label position=&quot;center&quot;&gt;%artist%&lt;/label&gt;</pre>
+            </li>
+            <li>It does not resize the skin.</li>
+            <li>It has two more attributes: <span class="attribute">speed</span>
+                which specifies the speed of scrolling (a nice value is 
+                <span class="value">50</span>) and pause in ms which specifies the delay
+                when the text reaches either of it's edges. <span class="value">1000</span>
+                is a good value</li>
+        </ul>
+
+        <h4>absolute-images</h4>
+        <p>
+            Displays images stretched to full size of the layer, one over another.
+        </p>
+<pre>
+&lt;contents&gt;
+    &lt;image src=&quot;default\logo.png&quot;/&gt; 
+&lt;/contents&gt;
+</pre>
+
+        <h4>animation</h4>
+        <p>
+            Plays repeatedly an animation stretched to full size of the layer.
+        </p>
+<pre>
+&lt;contents&gt;
+    &lt;frame src=&quot;white\logoa1.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa2.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa3.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa4.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa5.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa6.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa5.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa4.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa3.png&quot; /&gt;
+    &lt;frame src=&quot;white\logoa2.png&quot; /&gt;
+&lt;/contents&gt;
+</pre>
+        <h4>album-art</h4>
+        <p>
+            This layer displays the album art. Each user can configure the
+            filenames in preferences. There is one subelement, <span class="element">NoAlbumArt</span>
+            which defines the image to show when no album art was shown.
+        </p>
+        <pre>
+&lt;contents&gt;
+    &lt;NoAlbumArt&gt;
+        noAlbumArt.png
+    &lt;/NoAlbumArt&gt;
+&lt;/contents&gt;
+                </pre>
+
+        <h4>button</h4>
+        <p>
+            This layer creates a clickable button. It's subelement <span class="element">action</span>
+            defines the action to do. It can be any command from the main menu, like <span class="value">Play</span>.
+            The subelements <span class="element">normalImg</span>, <span class="element">overImg</span>, <span class="element">downImg</span>
+            select which images to use for the button in the three states.
+        </p>
+        <pre>
+&lt;contents&gt;
+    &lt;action&gt;
+        Next
+    &lt;/action&gt;
+    &lt;normalImg src=&quot;buttons-normal_07.png&quot; /&gt;
+    &lt;overImg src=&quot;buttons-over_07.png&quot; /&gt;
+    &lt;downImg src=&quot;buttons-down_07.png&quot; /&gt;
+&lt;/contents&gt;
+        </pre>
+        <div class="changed">
+            <p>
+                Now you don't have to specify <span class="element">normalImg, overImg, downImg</span> in which case nothing will be drawn.
+            </p>
+            <p>
+                The <span class="element">action</span> now supports multiple types of actions, selected using the attribute <span class="attribute">type</span>.
+                There can be more than one <span class="element">action</span> element. They are all executed in the order they appear in the
+                xml file.
+            </p>
+            <h5>menu</h5>
+            <p>
+                Launches a main menu command. The entire path to the menu item must be entered, using / (slash) as a separator. 
+                For example the following will set the playback order to random:
+            </p>
+<pre>
+    &lt;action type="menu"&gt;
+        Playback/Order/Random
+    &lt;/action&gt;
+</pre>
+
+            <h5>contextmenu</h5>
+            <p>
+                Runs a context menu command. The target of this command is given by the attribute <span class="attribute">context</span> ::=
+                <span class="value">nowplaying</span> | <span class="value">playlist</span>.
+            </p>
+            <p>
+                Contextmenu items are rather tricky, because they can be re-ordered by user and components can create the menu dynamically. foo_title always uses
+                the default path to the item. You can find the default path in contextmenu editor when you right-click on the root node and choose Add item.
+                Dynamic items unfortunately don't show up the same way in the menu as the path. Here are some correct examples of valid context menu
+                paths:
+            </p>
+            <pre>
+    Tagging/MP3 Tag Types...
+    Playback Statistics/Rating/Rating/3
+    Search For Same/Search For Same/Artist
+    Properties
+            </pre>
+
+            <h5>toggle</h5>
+            <p>
+                Toggles a layer (including its sublayers) on or off. Disabled layer is not drawn, updated and does not react to input. The attribute 
+                <span class="attribute">target</span> contains the name of layer to affect. The attribute <br />
+                <span class="attribute">only</span> ::= <span class="value">enable</span> | <span class="value">disable</span> | [<span class="value">toggle</span>] <br />
+                can be used to make the button always enable or always disable (instead of toggling) a layer. To enable/disable more layers at once, simply 
+                include multiple <span class="element">action</span> tags in the button.
+            </p>
+
+        </div>
+
+        <p>
+            See the XML's of the attached skins and feel free to use them as a starting point for your own skins.
+        </p>
+        <h2>About me</h2>
+        <p>
+            My name is Roman Plášil, I study at Faculty of Informatics at Masaryk University, Czech Republic. I hope you'll enjoy this component.
+        </p>
+    </div>
+
+
+    </body>
+</html>
